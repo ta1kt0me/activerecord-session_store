@@ -147,8 +147,3 @@ module ActionDispatch
     end
   end
 end
-
-if ActiveRecord::VERSION::MAJOR == 4
-  require 'action_dispatch/session/legacy_support'
-  ActionDispatch::Session::ActiveRecordStore.send(:include, ActionDispatch::Session::LegacySupport)
-end
